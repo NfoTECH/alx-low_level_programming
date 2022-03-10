@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 /**
- * main -This is where the execution starts
+ * main - This is where execution starts
  *
- * Return: 0 shows successful execution
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-        puts("\"Programming is like building a multilingual puzzle");
-        return (0);
+	puts("\"Programming is like building a multilingual puzzle");
+	return (0);
 }
