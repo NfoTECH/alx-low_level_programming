@@ -1,20 +1,17 @@
 #include <stdio.h>
 
 /**
-*main - Start of execution
-*Return: return 0 
-*/
-
+ * main - Execution starts here
+ *
+ * Return: Always (Success)
+ **/
 int main(void)
 {
-	char alphabets = 'a';
+		char alphabets;
 
-	while (alphabets <= 'z')
-	{
-		putchar(alphabets);
-		alphabets++;
-	}
-	putchar('\n');
+		for (alphabets = 'a'; alphabets <= 'z'; alphabets++)
+			putchar(alphabets);
 
-	return (0);
+		putchar('\n');
+		return (0);
 }
