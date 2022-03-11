@@ -1,18 +1,18 @@
 
 /**
- ** main - Executes combo of single digits num
+ ** main - Execution starts here
  *
- * Return: Always (Success);
+ * Return: return 0 (Success);
  **/
 int main(void)
 {
-	int num;
+	int c;
 
-	for (num = '0'; num <= '9'; num++)
+	for (c = '0'; c <= '9'; c++)
 	{
-		putchar(num);
+		putchar(c);
 
-		if (num != '9')
+		if (c != '9')
 		{
 			putchar(',');
 			putchar(' ');
