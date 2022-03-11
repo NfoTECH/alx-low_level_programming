@@ -1,24 +1,24 @@
 #include <stdio.h>
 
 /**
- * main - Execution start here
+ * main - Execution starts here
  *
- * Return: return 0 
+ * Return: return 0 (Success)
  **/
 int main(void)
 {
-	int num1, num2;
+	int c, i;
 
-	for (num1 = '0'; num1 <= '9'; num1++)
+	for (c = '0'; c <= '9'; c++)
 	{
-		for (num2 = '0'; num2 <= '9'; num2++)
+		for (i = '0'; i <= '9'; i++)
 		{
-			if (num1 < num2)
+			if (c < i)
 			{
-				putchar(num1);
-				putchar(num2);
+				putchar(c);
+				putchar(i);
 
-				if (num1 != '8' || (num1 == '8' && num2 != '9'))
+				if (c != '8' || (c == '8' && i != '9'))
 				{
 					putchar(',');
 					putchar(' ');
