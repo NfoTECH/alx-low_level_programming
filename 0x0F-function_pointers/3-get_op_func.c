@@ -1,25 +1,31 @@
-#ifndef _CALC_H_
-#define _CALC_H_
-
-#include <stdlib.h>
+#include "3-calc.h"
 #include <stdio.h>
+#include <string.h>
+
 /**
- * struct op - Struct op
- *
- * @op: The operator
- * @f: The function associated
- */
-typedef struct op
+ * get_op_func - Compares function with pointer and returns the equal.
+ * @s: points a char
+ * Return: Returns the function and the operator when equal
+**/
+
+int (*get_op_func(char *s))(int, int)
 {
-	char *op;
-	int (*f)(int a, int b);
-} op_t;
+op_t ops[] = {
+{"+", op_add},
+{"-", op_sub},
+{"*", op_mul},
+{"/", op_div},
+{"%", op_mod},
+{NULL, NULL}
+};
 
-int op_add(int a, int b);
-int op_sub(int a, int b);
-int op_mul(int a, int b);
-int op_div(int a, int b);
-int op_mod(int a, int b);
-int (*get_op_func(char *s))(int, int);
+int i = 0;
 
-#endif
+while (ops[i].op != NULL)
+{
+if (!strcmp(ops[i].op, s))
+return (ops[i].f);
+i++;
+}
+return (NULL);
+}
